@@ -68,7 +68,7 @@ The user associated with the PAT must have write access to the repository.
 ## Sponsors
 
 <p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/julien-deramond/static/sponsors.svg">
+  <a href="https://github.com/sponsors/julien-deramond/" aria-label="Go to Julien's GitHub Sponsors page">
     <img src='https://cdn.jsdelivr.net/gh/julien-deramond/static/sponsors.svg'/>
   </a>
 </p>
