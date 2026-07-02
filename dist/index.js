@@ -189,7 +189,10 @@ function updateBody(octokit, owner, repo, issueNumber, body, editMode, appendSep
                 const { data: issue } = yield octokit.rest.issues.get({
                     owner: owner,
                     repo: repo,
-                    issue_number: issueNumber
+                    issue_number: issueNumber,
+                    headers: {
+                        'X-GitHub-Api-Version': '2026-03-10'
+                    }
                 });
                 issueBody = appendSeparatorTo(issue.body ? issue.body : '', appendSeparator);
             }
@@ -198,7 +201,10 @@ function updateBody(octokit, owner, repo, issueNumber, body, editMode, appendSep
                 const { data: issue } = yield octokit.rest.issues.get({
                     owner: owner,
                     repo: repo,
-                    issue_number: issueNumber
+                    issue_number: issueNumber,
+                    headers: {
+                        'X-GitHub-Api-Version': '2026-03-10'
+                    }
                 });
                 issueBody = prependSeparatorTo(issue.body ? issue.body : '', prependSeparator);
             }
@@ -213,7 +219,10 @@ function updateBody(octokit, owner, repo, issueNumber, body, editMode, appendSep
                 owner: owner,
                 repo: repo,
                 issue_number: issueNumber,
-                body: issueBody
+                body: issueBody,
+                headers: {
+                    'X-GitHub-Api-Version': '2026-03-10'
+                }
             });
             core.info(`Updated issue id '${issueNumber}'.`);
         }

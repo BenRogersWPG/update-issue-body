@@ -50,7 +50,10 @@ async function updateBody(
       const {data: issue} = await octokit.rest.issues.get({
         owner: owner,
         repo: repo,
-        issue_number: issueNumber
+        issue_number: issueNumber,
+        headers: {
+          'X-GitHub-Api-Version': '2026-03-10'
+        }
       })
       issueBody = appendSeparatorTo(
         issue.body ? issue.body : '',
@@ -61,7 +64,10 @@ async function updateBody(
       const {data: issue} = await octokit.rest.issues.get({
         owner: owner,
         repo: repo,
-        issue_number: issueNumber
+        issue_number: issueNumber,
+        headers: {
+          'X-GitHub-Api-Version': '2026-03-10'
+        }
       })
       issueBody = prependSeparatorTo(
         issue.body ? issue.body : '',
@@ -80,7 +86,10 @@ async function updateBody(
       owner: owner,
       repo: repo,
       issue_number: issueNumber,
-      body: issueBody
+      body: issueBody,
+        headers: {
+          'X-GitHub-Api-Version': '2026-03-10'
+        }
     })
     core.info(`Updated issue id '${issueNumber}'.`)
   }
