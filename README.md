@@ -7,6 +7,18 @@ A GitHub action to update issue's body.
 
 _This is heavily based on [peter-evans/create-or-update-comment](https://github.com/peter-evans/create-or-update-comment/)._
 
+## Do a new build:
+
+1. Edit package.json version of project
+1. Then do:
+
+```bash
+npm run build
+```
+3. Commit package
+4. Create new release 
+
+
 ## Usage
 
 ###  Replace issue body
